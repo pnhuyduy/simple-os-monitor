@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple OS Monitor</title>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="js/chart.js"></script>
-</head>
-<body>
-  <div id="cpuUsage"></div>
-  <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple OS Monitor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="js/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>CPU</h1>
+          <div class="row">
+            <div class="col-lg-6">
+              <div id="cpuHistogram"></div>
+            </div>
+            <div class="col-lg-6">
+              <div id="cpuUsage"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <h1>RAM</h1>
+          <div class="row">
+            <div class="col-lg-6">
+              <div id="ramHistogram"></div>
+            </div>
+            <div class="col-lg-6">
+              <div id="ramUsage" style="width: 900px; height: 500px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
