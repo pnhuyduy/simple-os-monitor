@@ -14,7 +14,7 @@ socket.on("cpu-info", (data) => {
 socket.on("ram-info", (data) => {
   const { usedMemMb, freeMemMb, freeMemPercentage } = data;
   if (ramHistogram.length >= 60) ramHistogram.shift();
-  ramHistogram.push([new Date(), freeMemPercentage]);
+  ramHistogram.push([new Date(), 100 - freeMemPercentage]);
   drawRamHistogram();
 
   ramUsage = [
